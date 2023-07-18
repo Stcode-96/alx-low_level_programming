@@ -1,25 +1,36 @@
 #include "main.h"
 
 /**
- * print_sign - prints the sign of a number
- * @n: the int to check
- * Return: 1 and prints + if n is greater than zero
- * 0 and prints 0 if n is zero
- * -1 and prints - if n is less than zero
+ * times_table - prints the 9 times table, starting with 0
  */
-int print_sign(int n)
+void times_table(void)
 {
-	if (n > 0)
+	int i, j, k;
+
+	for (i = 0; i < 10; i++)
 	{
-		_putchar('+');
-		return (1);
-	} else if (n == 0)
-}
-		_putchar(48);
-		return (0);
-	} else if (n < 0)
-	{
-		_putchar('-');
+		for (j = 0; j < 10; j++)
+		{
+			k = j * i;
+			if (j == 0)
+			{
+				_putchar(k + '0');
+			}
+
+			if (k < 10 && j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			} else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 10) + '0');
+				_putchar((k % 10) + '0');
+			}
+		}
+		_putchar('\n');
 	}
-		return (-1);
 }
