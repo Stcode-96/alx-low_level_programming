@@ -1,15 +1,26 @@
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.>
 #include "lists.h"
 
+/**
+ * list_len - Counts the number of elements in a list_t list.
+ * @h: A pointer to the head of the list.
+ *
+ * Description: This function counts the number of elements in the provided
+ * list by traversing through each node while incrementing the count.
+ *
+ * Return: The number of elements in the list.
+ */
 size_t list_len(const list_t *h)
 {
-	size_t n=0;
+	int count = 0;
 
-	while(h)
+	while (h)
 	{
-		n++;
+		count++;
 		h = h->next;
 	}
 
-	return(n);
+	return (count);
 }
