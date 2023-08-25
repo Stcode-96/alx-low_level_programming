@@ -1,14 +1,18 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
 
 /**
- * print_list - prints all the elements of a list_t list.
- * @h: name of the list. 
- * Description: The function is used to print the elements within the list file
- * Return: the number of nodes
-*/
+ * print_list - Prints all the elements of a list_t list.
+ * @h: A pointer to the head of the linked list.
+ *
+ * Description: This function prints the elements of the linked list
+ *              starting from the given head.
+ *
+ * Return: The number of nodes in the linked list.
+ */
+
 size_t print_list(const list_t *h)
 {
 	int count = 0;
