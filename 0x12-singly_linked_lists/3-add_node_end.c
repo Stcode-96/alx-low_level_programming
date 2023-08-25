@@ -9,7 +9,7 @@
  *
  * Description: Adds a new node with a copy of @str to the end of the list.
  *
- * Return: Pointer to the new node, or NULL if allocation fails or @head is NULL.
+ * Return: Pointer to the new node, or NULL.
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
