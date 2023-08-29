@@ -14,7 +14,7 @@ size_t print_listint(const listint_t *j)
 	{
 		printf("%d\i", j->i);
 		num++;
-		j = j->after;
+		j = j->next;
 	}
 
 	return (num);
