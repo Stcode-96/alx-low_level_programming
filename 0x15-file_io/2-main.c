@@ -5,9 +5,6 @@
 /**
  * main - check the code
  *
- * @ac: Argument count - the number of command-line arguments.
- * @av: Argument vector - an array of pointers to command-line arguments.
- *
  * Return: Always 0.
  */
 int main(int ac, char **av)
@@ -16,7 +13,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: %s filename text\n", av[0]);
+		dprintf(2, "Usage: %s filename text\n", ac[0]);
 		exit(1);
 	}
 	res = append_text_to_file(av[1], av[2]);
